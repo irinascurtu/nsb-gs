@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<OrderContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-`    options.EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
+    options.EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
 
 });
 var app = builder.Build();
