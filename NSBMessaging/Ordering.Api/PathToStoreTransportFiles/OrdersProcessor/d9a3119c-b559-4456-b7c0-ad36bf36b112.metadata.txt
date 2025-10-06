@@ -1,0 +1,15 @@
+{
+  "NServiceBus.MessageId": "05aa7d04-9d3a-48e9-b777-b36e00f75b0a",
+  "NServiceBus.MessageIntent": "Send",
+  "NServiceBus.ConversationId": "e3e12174-ea3a-4a94-8451-b36e00f75b0d",
+  "NServiceBus.CorrelationId": "05aa7d04-9d3a-48e9-b777-b36e00f75b0a",
+  "NServiceBus.ReplyToAddress": "MyCoolEndpoint.Messages",
+  "NServiceBus.OriginatingMachine": "IRINA-DESKTOP",
+  "NServiceBus.OriginatingEndpoint": "Ordering.Api",
+  "$.diagnostics.originating.hostid": "8b2f7e8c25f6f3630c8a97f30611b9ea",
+  "NServiceBus.ContentType": "application\/json",
+  "NServiceBus.EnclosedMessageTypes": "Contracts.Commands.CreateOrder, Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "NServiceBus.Version": "9.2.7",
+  "NServiceBus.TimeSent": "2025-10-06 15:00:35:678960 Z",
+  "traceparent": "00-17c13075bb9450a0dcd956b1da422500-8542fb721e20dd89-00"
+}

@@ -1,3 +1,4 @@
+using Contracts.Commands;
 using Microsoft.EntityFrameworkCore;
 using Ordering.Domain;
 
@@ -15,6 +16,19 @@ builder.Services.AddDbContext<OrderContext>(options =>
     options.EnableSensitiveDataLogging(builder.Environment.IsDevelopment());
 
 });
+
+
+var endpointConfiguration = new NServiceBus.EndpointConfiguration("Ordering.Api");
+
+endpointConfiguration.SendOnly();
+endpointConfiguration.UseSerialization<SystemJsonSerializer>();
+var transport = endpointConfiguration.UseTransport<LearningTransport>();
+transport.Routing().RouteToEndpoint(typeof(CreateOrder), "OrdersProcessor");
+
+
+builder.UseNServiceBus(endpointConfiguration);
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
